@@ -1,0 +1,327 @@
+/* 
+  Vectify - Apple Human Interface Design System
+  Complete Pure Dark / Pure Light Studio Monochrome Aesthetic
+  Inspired by macOS Sequoia & iOS Design Guidelines
+*/
+
+:root {
+  /* Apple Pure Dark Theme (Default) */
+  --bg-primary: #000000;
+  --bg-secondary: #0c0c0e;
+  --bg-tertiary: #161618;
+  --bg-elevated: #1c1c1e;
+  --bg-glass: rgba(22, 22, 24, 0.78);
+  --bg-glass-subtle: rgba(255, 255, 255, 0.04);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-hover: rgba(255, 255, 255, 0.25);
+  
+  --text-primary: #f5f5f7;
+  --text-secondary: #86868b;
+  --text-tertiary: #636366;
+  
+  --btn-primary-bg: #ffffff;
+  --btn-primary-text: #000000;
+  --btn-primary-hover: #e5e5ea;
+  
+  --btn-secondary-bg: rgba(255, 255, 255, 0.08);
+  --btn-secondary-text: #f5f5f7;
+  --btn-secondary-hover: rgba(255, 255, 255, 0.14);
+
+  --segmented-bg: rgba(255, 255, 255, 0.06);
+  --segmented-active: rgba(255, 255, 255, 0.18);
+  --segmented-active-text: #ffffff;
+
+  --checker-a: #09090b;
+  --checker-b: #131316;
+
+  --code-bg: #09090b;
+  --code-text: #e4e4e7;
+}
+
+html.light {
+  /* Apple Pure White Studio Theme */
+  --bg-primary: #f5f5f7;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f2f2f7;
+  --bg-elevated: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.82);
+  --bg-glass-subtle: rgba(0, 0, 0, 0.03);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.14);
+  --border-hover: rgba(0, 0, 0, 0.25);
+  
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-tertiary: #86868b;
+  
+  --btn-primary-bg: #000000;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #2c2c2e;
+  
+  --btn-secondary-bg: rgba(0, 0, 0, 0.06);
+  --btn-secondary-text: #1d1d1f;
+  --btn-secondary-hover: rgba(0, 0, 0, 0.1);
+
+  --segmented-bg: rgba(0, 0, 0, 0.06);
+  --segmented-active: #ffffff;
+  --segmented-active-text: #000000;
+
+  --checker-a: #e5e5ea;
+  --checker-b: #f2f2f7;
+
+  --code-bg: #f5f5f7;
+  --code-text: #1c1c1e;
+}
+
+/* Base Typography & Background */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Inter, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Apple Monospace for Code & Data */
+.font-mono {
+  font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  letter-spacing: -0.02em;
+}
+
+/* Apple Frosted Glass Surface */
+.apple-glass {
+  background: var(--bg-glass);
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.apple-card-subtle {
+  background: var(--bg-glass-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+}
+
+/* Apple Segmented Control (Tabs) */
+.apple-segmented-group {
+  background: var(--segmented-bg);
+  padding: 3px;
+  border-radius: 12px;
+  display: inline-flex;
+  gap: 2px;
+  border: 1px solid var(--border-subtle);
+}
+
+.apple-segmented-btn {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 9px;
+  color: var(--text-secondary);
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.apple-segmented-btn:hover {
+  color: var(--text-primary);
+}
+
+.apple-segmented-btn.active {
+  background: var(--segmented-active);
+  color: var(--segmented-active-text);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Apple Buttons */
+.btn-apple-primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.btn-apple-primary:hover {
+  background: var(--btn-primary-hover);
+  transform: translateY(-0.5px);
+}
+
+.btn-apple-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-apple-secondary {
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn-apple-secondary:hover {
+  background: var(--btn-secondary-hover);
+  border-color: var(--border-medium);
+}
+
+.btn-apple-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Apple Drop Zone */
+.apple-drop-zone {
+  border: 1.5px dashed var(--border-medium);
+  background: var(--bg-glass-subtle);
+  border-radius: 14px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-drop-zone:hover,
+.apple-drop-zone.dragover {
+  border-color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+html.light .apple-drop-zone:hover,
+html.light .apple-drop-zone.dragover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Apple Native Form Inputs */
+.apple-select,
+.apple-input {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: 10px;
+  font-size: 13px;
+  transition: all 0.15s ease;
+}
+
+.apple-select:focus,
+.apple-input:focus {
+  outline: none;
+  border-color: var(--border-hover);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+html.light .apple-select:focus,
+html.light .apple-input:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Minimalist Range Slider */
+input[type="range"].apple-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: var(--border-medium);
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type="range"].apple-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s ease;
+}
+
+input[type="range"].apple-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Monochrome Checkerboard Background */
+.checker-bg {
+  background-color: var(--checker-a);
+  background-image: 
+    linear-gradient(45deg, var(--checker-b) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--checker-b) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--checker-b) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--checker-b) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+/* Pixel Art Rendering (Zero Blurring) */
+.pixelated {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Apple Floating HUD Pill */
+.apple-hud {
+  pointer-events: none;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-medium);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.36);
+  border-radius: 12px;
+}
+
+/* Clean Apple Progress Bar */
+.apple-progress-bar {
+  background: var(--text-primary);
+  transition: width 0.15s ease-out;
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Toast Notifications */
+.apple-toast {
+  background: var(--bg-glass);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: appleToastSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes appleToastSlide {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

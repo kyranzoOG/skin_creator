@@ -1,0 +1,358 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .pixelated {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* -------------------------------------------------------------
+ * Pistachio Green Ambient Glow & Cyber Grid Background
+ * ------------------------------------------------------------- */
+.bg-pistachio-grid {
+  background-color: #05070c;
+  background-image:
+    /* Ambient Pistachio Radial Glows */
+    radial-gradient(circle at 50% 12%, rgba(190, 242, 100, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 10% 75%, rgba(190, 242, 100, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 75%, rgba(190, 242, 100, 0.08) 0%, transparent 45%),
+    /* Pistachio Grid Lines */
+    linear-gradient(to right, rgba(190, 242, 100, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(190, 242, 100, 0.08) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.bg-pistachio-grid::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(2, 3, 6, 0.85) 100%);
+  z-index: 1;
+}
+
+/* -------------------------------------------------------------
+ * Pure Dark Black & Gray Skin Studio Theme with Pistachio Accents
+ * ------------------------------------------------------------- */
+
+/* Outer Window Frame */
+.max-w-7xl > div.bg-\[\#0c0e17\]\/95 {
+  background: rgba(11, 13, 20, 0.98) !important;
+  border: 2px solid rgba(190, 242, 100, 0.35) !important;
+  box-shadow: 
+    0 30px 70px -15px rgba(0, 0, 0, 0.98),
+    0 0 50px rgba(190, 242, 100, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  color: #f8fafc !important;
+}
+
+/* Window Header */
+.max-w-7xl header {
+  background: #141722 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+.max-w-7xl header h1 {
+  color: #ffffff !important;
+}
+
+/* Left Column: Category Navigation Tabs */
+aside.bg-\[\#0d0f1b\]\/80 {
+  background: rgba(13, 15, 24, 0.95) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Center Column: Item Grid & Content Panels */
+main.bg-\[\#0f1220\]\/90 {
+  background: rgba(15, 18, 29, 0.95) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Item Grid Container */
+main .bg-\[\#0d101d\] {
+  background: rgba(10, 12, 19, 0.95) !important;
+}
+
+/* Search Box & Inputs */
+main input[type="text"] {
+  background: #161a2b !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+}
+
+main input[type="text"]::placeholder {
+  color: #8b95a5 !important;
+}
+
+/* Filter buttons */
+main .flex.items-center.gap-1\.5 button {
+  background: #181c2d !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #cbd5e1 !important;
+}
+
+main .flex.items-center.gap-1\.5 button.bg-\[\#BEF264\]\/15 {
+  background: #BEF264 !important;
+  border-color: #BEF264 !important;
+  color: #070913 !important;
+  font-weight: 900 !important;
+}
+
+/* Item Cards in Grid */
+.item-card-box,
+main .grid button.group {
+  background: #151826 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+  border-radius: 12px !important;
+}
+
+main .grid button.group:hover {
+  background: #1d2235 !important;
+  border-color: rgba(190, 242, 100, 0.5) !important;
+  box-shadow: 0 4px 16px rgba(190, 242, 100, 0.2) !important;
+}
+
+main .grid button.group.border-\[\#BEF264\] {
+  background: #1d2235 !important;
+  border-color: #BEF264 !important;
+  box-shadow: 0 0 0 2px #BEF264, 0 4px 16px rgba(190, 242, 100, 0.3) !important;
+}
+
+/* Pagination Bar */
+main .border-t.border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(12, 15, 25, 0.95) !important;
+  color: #cbd5e1 !important;
+}
+
+/* Right Column: 3D Character Viewport Section */
+section.bg-\[\#0d0f1b\]\/80 {
+  background: rgba(13, 15, 24, 0.95) !important;
+}
+
+/* Username input */
+section input[type="text"] {
+  background: #161a2b !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* 3D Viewport Action Buttons */
+section button.bg-\[\#161a2b\] {
+  background: #181c2d !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #cbd5e1 !important;
+}
+
+section button.bg-\[\#161a2b\]:hover {
+  background: #252b45 !important;
+  color: #ffffff !important;
+}
+
+/* Animation Chips */
+section .flex.flex-wrap.gap-1 button {
+  background: #181c2d !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #cbd5e1 !important;
+}
+
+section .flex.flex-wrap.gap-1 button.bg-\[\#BEF264\] {
+  background: #BEF264 !important;
+  border-color: #BEF264 !important;
+  color: #070913 !important;
+  font-weight: 900 !important;
+  box-shadow: 0 2px 8px rgba(190, 242, 100, 0.3) !important;
+}
+
+/* RGB Sliders Container & Controls */
+.rgb-controls-box {
+  background: rgba(16, 19, 30, 0.98) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 14px !important;
+  padding: 8px 12px !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+}
+
+.rgb-stepper-btn {
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  background: #1b2035 !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 7px !important;
+  color: #f8fafc !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.1s ease !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+  padding: 0 !important;
+}
+
+.rgb-stepper-btn:hover {
+  background: #252b45 !important;
+  border-color: #BEF264 !important;
+  color: #BEF264 !important;
+}
+
+.rgb-stepper-btn:active {
+  transform: scale(0.92) !important;
+}
+
+/* Custom RGB Sliders */
+.rgb-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #252a40;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  outline: none;
+  cursor: pointer;
+}
+
+.rgb-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease;
+}
+
+.rgb-slider:hover::-webkit-slider-thumb {
+  transform: scale(1.15);
+}
+
+.rgb-slider-red::-webkit-slider-thumb {
+  background: #ef4444 !important;
+}
+.rgb-slider-green::-webkit-slider-thumb {
+  background: #10b981 !important;
+}
+.rgb-slider-blue::-webkit-slider-thumb {
+  background: #0ea5e9 !important;
+}
+
+.rgb-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.rgb-slider-red::-moz-range-thumb {
+  background: #ef4444 !important;
+}
+.rgb-slider-green::-moz-range-thumb {
+  background: #10b981 !important;
+}
+.rgb-slider-blue::-moz-range-thumb {
+  background: #0ea5e9 !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d101d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b334d;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f4a6e;
+}
+
+/* MultiCraft Corner Selection Brackets */
+.corner-brackets-overlay {
+  position: absolute;
+  inset: -2px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.corner-brackets-overlay::before,
+.corner-brackets-overlay::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: #BEF264;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+}
+
+.corner-brackets-overlay::before {
+  top: 0;
+  left: 0;
+  border-top-width: 2.5px;
+  border-left-width: 2.5px;
+  border-style: solid;
+}
+
+.corner-brackets-overlay::after {
+  top: 0;
+  right: 0;
+  border-top-width: 2.5px;
+  border-right-width: 2.5px;
+  border-style: solid;
+}
+
+.corner-brackets-bottom {
+  position: absolute;
+  inset: -2px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.corner-brackets-bottom::before,
+.corner-brackets-bottom::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: #BEF264;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+}
+
+.corner-brackets-bottom::before {
+  bottom: 0;
+  left: 0;
+  border-bottom-width: 2.5px;
+  border-left-width: 2.5px;
+  border-style: solid;
+}
+
+.corner-brackets-bottom::after {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: 2.5px;
+  border-right-width: 2.5px;
+  border-style: solid;
+}
